@@ -60,12 +60,12 @@ npx remotion render src/remotion/index.js NewsReel out/news.mp4
 
 เว็บ: https://kalamell.github.io/myweb01/
 
-`.github/workflows/deploy.yml` จะ build และ deploy อัตโนมัติทุกครั้งที่ push ไปยัง `main` หรือ branch พัฒนา
-(สั่งรันเองได้จากแท็บ Actions → *Deploy to GitHub Pages* → *Run workflow*)
+`.github/workflows/deploy.yml` จะ build แล้วนำไฟล์ใน `dist/` ไปไว้ที่ branch `gh-pages` อัตโนมัติ
+ทุกครั้งที่ push ไปยัง `main` หรือ branch พัฒนา (สั่งรันเองได้จากแท็บ Actions → *Deploy to GitHub Pages* → *Run workflow*)
 
 - ตั้ง `BASE_PATH=/<ชื่อ repo>/` ตอน build เพื่อให้ path ของไฟล์ถูกต้อง
 - คัดลอก `index.html` เป็น `404.html` เพื่อให้ลิงก์ตรงเข้าหน้าย่อย เช่น `/myweb01/about` ใช้งานได้
-- ถ้า workflow ล้มเหลวที่ขั้น *configure-pages* ให้ไปที่ **Settings → Pages → Build and deployment → Source** แล้วเลือก **GitHub Actions** หนึ่งครั้ง
+- ถ้าเว็บยังไม่ขึ้น ให้ไปที่ **Settings → Pages → Build and deployment** เลือก Source เป็น **Deploy from a branch** และ branch **gh-pages** / **(root)**
 
 ทดสอบแบบเดียวกับบน GitHub Pages ในเครื่อง:
 

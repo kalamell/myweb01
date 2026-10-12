@@ -6,16 +6,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,19 +28,10 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}/
       # ให้ลิงก์ตรงเข้าหน้าย่อย (เช่น /about) ทำงานบน GitHub Pages
       - run: cp dist/index.html dist/404.html
-      - uses: actions/configure-pages@v5
+      # เผยแพร่ dist/ ไปที่ branch gh-pages ซึ่ง GitHub Pages ใช้เป็นแหล่งเว็บ
+      - uses: peaceiris/actions-gh-pages@v4
         with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          publish_branch: gh-pages
+          force_orphan: true
