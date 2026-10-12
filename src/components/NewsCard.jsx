@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CalendarDays, FileText } from 'lucide-react'
 import { newsCategories, thaiDate } from '../data/school'
+import { asset } from '../lib/asset'
 import { fadeUp } from './ui'
 
 const catLabel = (id) => newsCategories.find((c) => c.id === id)?.label ?? ''
@@ -20,7 +21,7 @@ export default function NewsCard({ item, onOpen, featured = false }) {
       <div className={`relative overflow-hidden bg-gradient-to-br from-saffron-100 to-azure-100 ${featured ? 'aspect-[4/3] md:aspect-auto md:flex-1' : 'aspect-[4/3]'}`}>
         {item.image ? (
           <img
-            src={item.image}
+            src={asset(item.image)}
             alt=""
             loading="lazy"
             className="absolute inset-0 size-full object-cover object-top transition-transform duration-700 group-hover:scale-110"

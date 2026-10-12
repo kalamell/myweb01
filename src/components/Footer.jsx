@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { identity, partners, school } from '../data/school'
+import { asset } from '../lib/asset'
 import { navItems } from './Navbar'
 import { FacebookIcon, Wave } from './ui'
 
@@ -14,7 +15,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pt-24 pb-12 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-4">
-            <img src={school.logo} alt="" className="h-20 w-auto" />
+            <img src={asset(school.logo)} alt="" className="h-20 w-auto" />
             <div>
               <div className="font-display text-xl font-semibold text-white">{school.name}</div>
               <div className="text-sm text-azure-300">{school.office}</div>

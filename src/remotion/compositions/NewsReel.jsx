@@ -1,14 +1,13 @@
 import { TransitionSeries, linearTiming, springTiming } from '@remotion/transitions'
 import { slide } from '@remotion/transitions/slide'
 import { wipe } from '@remotion/transitions/wipe'
-import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion'
-import { font, palette } from '../theme'
+import { AbsoluteFill, Img, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion'
+import { font, media, palette } from '../theme'
 import { Rays } from './Rays'
 
 export const SLIDE_FRAMES = 120
 export const TRANSITION_FRAMES = 20
 
-const asset = (src) => staticFile(src.replace(/^\//, ''))
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString('th-TH', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -27,7 +26,7 @@ const NewsSlide = ({ item, index, total, label }) => {
     <AbsoluteFill style={{ background: palette.ink, overflow: 'hidden' }}>
       {item.image ? (
         <Img
-          src={asset(item.image)}
+          src={media(item.image)}
           style={{
             position: 'absolute',
             inset: -40,
@@ -100,7 +99,7 @@ const NewsSlide = ({ item, index, total, label }) => {
             transform: `translateX(${(1 - card) * 400}px) rotate(${(1 - card) * 12 + 2}deg)`,
           }}
         >
-          <Img src={asset(item.image)} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+          <Img src={media(item.image)} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
         </div>
       ) : null}
 

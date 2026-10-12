@@ -1,4 +1,6 @@
 import { loadFont } from '@remotion/google-fonts/Kanit'
+import { getRemotionEnvironment, staticFile } from 'remotion'
+import { asset } from '../lib/asset.js'
 
 const { fontFamily } = loadFont('normal', {
   weights: ['400', '600', '800'],
@@ -19,3 +21,7 @@ export const palette = {
 }
 
 export const FPS = 30
+
+// ใน Player บนเว็บใช้ base path ของ Vite ส่วนใน Remotion Studio / CLI ใช้ staticFile()
+export const media = (path) =>
+  getRemotionEnvironment().isPlayer ? asset(path) : staticFile(path.replace(/^\//, ''))

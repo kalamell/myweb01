@@ -4,11 +4,10 @@ import {
   Sequence,
   interpolate,
   spring,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion'
-import { font, palette } from '../theme'
+import { font, media, palette } from '../theme'
 import { Bubbles, Rays } from './Rays'
 
 const LogoReveal = () => {
@@ -33,7 +32,7 @@ const LogoReveal = () => {
           }}
         />
         <Img
-          src={staticFile('images/logo.png')}
+          src={media('images/logo.png')}
           style={{ position: 'relative', height: 260, transform: `scale(${s}) rotate(${(1 - s) * -25}deg)` }}
         />
       </div>

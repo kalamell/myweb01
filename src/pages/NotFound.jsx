@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { school } from '../data/school'
+import { asset } from '../lib/asset'
 
 export default function NotFound() {
   return (
     <section className="grid min-h-[80vh] place-items-center px-4 pt-32 text-center">
       <div>
         <motion.img
-          src={school.logo}
+          src={asset(school.logo)}
           alt=""
           className="mx-auto h-32"
           animate={{ rotate: [0, -10, 10, 0] }}

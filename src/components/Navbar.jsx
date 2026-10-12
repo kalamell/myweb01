@@ -3,6 +3,7 @@ import { Mail, Menu, Phone, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { school } from '../data/school'
+import { asset } from '../lib/asset'
 import { FacebookIcon } from './ui'
 
 export const navItems = [
@@ -59,7 +60,7 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link to="/" className="group flex min-w-0 items-center gap-3">
             <motion.img
-              src={school.logo}
+              src={asset(school.logo)}
               alt="ตราสัญลักษณ์โรงเรียน"
               className="h-12 w-auto shrink-0 drop-shadow"
               whileHover={{ rotate: [0, -8, 8, 0], scale: 1.08 }}

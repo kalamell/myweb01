@@ -12,13 +12,13 @@ export const school = {
   facebook: 'https://facebook.com/profile.php?id=61564964561421&sk=about',
   legacySite: 'http://osc.ac.th/mainpage',
   founded: 2525,
-  logo: '/images/logo.png',
+  logo: 'images/logo.png',
 }
 
 export const director = {
   name: 'นายวชิระ อาจเอื้อม',
   position: 'ผู้อำนวยการสถานศึกษา',
-  photo: '/images/director.webp',
+  photo: 'images/director.webp',
 }
 
 export const identity = {
@@ -191,7 +191,7 @@ export const news = [
     category: 'newsletter',
     title: 'ยินดีต้อนรับ นายวชิระ อาจเอื้อม เนื่องในโอกาสได้รับการพิจารณาให้ย้ายมาดำรงตำแหน่งผู้อำนวยการโรงเรียนอ้อมน้อยโสภณชนูปถัมภ์',
     date: '2026-10-01',
-    image: '/images/n-20261001-113149.webp',
+    image: 'images/n-20261001-113149.webp',
     link: legacy(21704, 395788),
   },
   {
@@ -199,7 +199,7 @@ export const news = [
     category: 'newsletter',
     title: 'การประชุมเชิงปฏิบัติการ “โครงการเสริมสร้างคุณธรรม จริยธรรม และธรรมาภิบาล เพื่อพัฒนาองค์กรแห่งคุณธรรม”',
     date: '2026-10-01',
-    image: '/images/n-20261001-112753.webp',
+    image: 'images/n-20261001-112753.webp',
     link: legacy(21704, 395787),
   },
   {
@@ -207,7 +207,7 @@ export const news = [
     category: 'newsletter',
     title: 'ขอแสดงความยินดี นางปิยมน รอดบุญเกิด ครูกลุ่มสาระการเรียนรู้ภาษาไทย',
     date: '2026-09-24',
-    image: '/images/n-20260924-131959.webp',
+    image: 'images/n-20260924-131959.webp',
     link: legacy(21704, 395400),
   },
   {
@@ -215,7 +215,7 @@ export const news = [
     category: 'newsletter',
     title: 'การสอบปลายภาคเรียนที่ 1 ปีการศึกษา 2569 ในระหว่างวันที่ 21 - 25 กันยายน 2569',
     date: '2026-09-24',
-    image: '/images/n-20260924-131925.webp',
+    image: 'images/n-20260924-131925.webp',
     link: legacy(21704, 395399),
   },
   {
@@ -223,7 +223,7 @@ export const news = [
     category: 'newsletter',
     title: 'การอบรมเชิงปฏิบัติการ “การพัฒนาศักยภาพบุคลากรด้านการบริหารจัดการความปลอดภัยในสถานศึกษาและป้องกันปัญหายาเสพติด ผ่านระบบเทคโนโลยีดิจิทัล (Safe School Digital Platform)”',
     date: '2026-09-24',
-    image: '/images/n-20260924-131810.webp',
+    image: 'images/n-20260924-131810.webp',
     link: legacy(21704, 395398),
   },
   {
@@ -231,7 +231,7 @@ export const news = [
     category: 'pr',
     title: 'Pitching ปีที่ 4 FutureEd Fest 2026 “นวัตกรรมปัญญามนุษย์ แก้ปัญหาจริง เปลี่ยนโลกยุค AI” ชิงรางวัลรวมกว่า 120,000 บาท',
     date: '2026-09-24',
-    image: '/images/n-20260924-132107.webp',
+    image: 'images/n-20260924-132107.webp',
     link: legacy(20274, 395401),
   },
   {
@@ -239,7 +239,7 @@ export const news = [
     category: 'pr',
     title: 'มหาวิทยาลัยขอนแก่น เปิดรับ “ครูคืนถิ่น” รุ่นที่ 2 จำนวน 87 อัตรา',
     date: '2026-08-29',
-    image: '/images/n-20260829-145146.webp',
+    image: 'images/n-20260829-145146.webp',
     link: legacy(20274, 393873),
   },
   {
@@ -247,7 +247,7 @@ export const news = [
     category: 'pr',
     title: 'ประชาสัมพันธ์ โครงการเพชรในตม',
     date: '2026-07-13',
-    image: '/images/n-20260713-124503.webp',
+    image: 'images/n-20260713-124503.webp',
     link: legacy(20274, 390347),
   },
   {
@@ -255,7 +255,7 @@ export const news = [
     category: 'pr',
     title: 'กฟผ. เปิดรับสมัครงาน ประจำปี 2569',
     date: '2026-06-19',
-    image: '/images/n-20260619-160110.webp',
+    image: 'images/n-20260619-160110.webp',
     link: legacy(20274, 388414),
   },
   {
@@ -263,7 +263,7 @@ export const news = [
     category: 'pr',
     title: 'สพฐ. ร่วมกับ สสวท. และบริษัทคาสิโอ ประเทศไทย จำกัด จัดการแข่งขันคณิตศาสตร์และฟิสิกส์ ด้วยการใช้เครื่องคำนวณ CASIO ClassWiz',
     date: '2026-06-19',
-    image: '/images/n-20260619-155953.webp',
+    image: 'images/n-20260619-155953.webp',
     link: legacy(20274, 388412),
   },
   {
@@ -271,7 +271,7 @@ export const news = [
     category: 'procurement',
     title: 'ผู้ชนะการเสนอราคา การขายพัสดุที่ไม่จำเป็นต้องใช้ในราชการ',
     date: '2026-10-09',
-    image: '/images/n-20261009-074146.webp',
+    image: 'images/n-20261009-074146.webp',
     link: legacy(21417, 396187),
   },
   {
@@ -279,7 +279,7 @@ export const news = [
     category: 'procurement',
     title: 'การขายพัสดุที่ไม่จำเป็นต้องใช้ในราชการ',
     date: '2026-10-07',
-    image: '/images/n-20261007-155237.webp',
+    image: 'images/n-20261007-155237.webp',
     link: legacy(21417, 396100),
   },
   {
@@ -287,7 +287,7 @@ export const news = [
     category: 'procurement',
     title: 'รับสมัครลูกจ้างชั่วคราว ตำแหน่งพนักงานขับรถยนต์ งบฯ สมาคมศิษย์เก่า',
     date: '2026-09-30',
-    image: '/images/n-20260930-163646.webp',
+    image: 'images/n-20260930-163646.webp',
     link: legacy(21417, 395717),
   },
   {
@@ -295,7 +295,7 @@ export const news = [
     category: 'procurement',
     title: 'รับสมัครบุคคลเพื่อจ้างเป็นพนักงานจ้างเหมาบริการ',
     date: '2026-09-23',
-    image: '/images/n-20260923-084252.webp',
+    image: 'images/n-20260923-084252.webp',
     link: legacy(21417, 395360),
   },
   {
@@ -303,7 +303,7 @@ export const news = [
     category: 'policy',
     title: 'ประกาศกระทรวงศึกษาธิการ เรื่อง นโยบายการศึกษาของกระทรวงศึกษาธิการ ประจำปีงบประมาณ 2569-2570',
     date: '2025-12-17',
-    image: '/images/n-20251217-142842.webp',
+    image: 'images/n-20251217-142842.webp',
     link: legacy(20432, 376172),
   },
   {
@@ -348,10 +348,10 @@ export const partners = [
 ]
 
 export const gallery = [
-  { src: '/images/hist3.webp', caption: 'ขบวนพาเหรดหน้าอาคารเรียน' },
-  { src: '/images/hist1.webp', caption: 'หลวงพ่อเพ็ง พระพุทธรูปประจำสถานศึกษา' },
-  { src: '/images/hist2.webp', caption: 'พระครูโสภณธรรมสาคร (หลวงพ่ออาบ) ผู้ก่อตั้งโรงเรียน' },
-  { src: '/images/tree.webp', caption: 'ต้นนนทรี ต้นไม้ประจำโรงเรียน' },
+  { src: 'images/hist3.webp', caption: 'ขบวนพาเหรดหน้าอาคารเรียน' },
+  { src: 'images/hist1.webp', caption: 'หลวงพ่อเพ็ง พระพุทธรูปประจำสถานศึกษา' },
+  { src: 'images/hist2.webp', caption: 'พระครูโสภณธรรมสาคร (หลวงพ่ออาบ) ผู้ก่อตั้งโรงเรียน' },
+  { src: 'images/tree.webp', caption: 'ต้นนนทรี ต้นไม้ประจำโรงเรียน' },
 ]
 
 export const thaiDate = (iso) =>

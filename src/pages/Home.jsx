@@ -6,6 +6,7 @@ import NewsCard from '../components/NewsCard'
 import NewsModal from '../components/NewsModal'
 import VideoPlayer from '../components/VideoPlayer'
 import { Counter, Icon, Reveal, SectionHeading, Wave, fadeUp, stagger } from '../components/ui'
+import { asset } from '../lib/asset'
 import { director, gallery, identity, news, programs, quickLinks, school, stats } from '../data/school'
 
 function Hero() {
@@ -167,7 +168,7 @@ function Welcome() {
       <Reveal x={-40} y={0} className="relative">
         <div className="absolute -inset-4 -z-10 rotate-3 rounded-[2.5rem] bg-gradient-to-br from-saffron-400 to-azure-400" />
         <div className="grid grid-cols-[1fr_1.2fr] items-end gap-4 rounded-[2rem] bg-white p-4">
-          <img src={director.photo} alt={director.name} className="aspect-[4/5] w-full rounded-3xl object-cover" />
+          <img src={asset(director.photo)} alt={director.name} className="aspect-[4/5] w-full rounded-3xl object-cover" />
           <div className="p-2">
             <Quote className="size-10 text-saffron-400" />
             <p className="mt-2 font-display text-xl leading-relaxed text-ink">
@@ -346,7 +347,7 @@ function Gallery() {
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {gallery.map((g, i) => (
           <Reveal key={g.src} delay={i * 0.08} className={`group relative overflow-hidden rounded-3xl ${i === 0 ? 'col-span-2 row-span-2' : ''}`}>
-            <img src={g.src} alt={g.caption} loading="lazy" className="size-full min-h-48 object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src={asset(g.src)} alt={g.caption} loading="lazy" className="size-full min-h-48 object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-ink/90 to-transparent p-4 pt-10 font-display text-white transition-transform duration-500 group-hover:translate-y-0">
               {g.caption}
             </div>

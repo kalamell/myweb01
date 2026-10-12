@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { CalendarDays, ExternalLink, X } from 'lucide-react'
 import { useEffect } from 'react'
 import { newsCategories, thaiDate } from '../data/school'
+import { asset } from '../lib/asset'
 
 export default function NewsModal({ item, onClose }) {
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function NewsModal({ item, onClose }) {
           >
             <div className="max-h-[45vh] overflow-auto bg-azure-50 md:max-h-[90vh]">
               {item.image ? (
-                <img src={item.image} alt="" className="w-full" />
+                <img src={asset(item.image)} alt="" className="w-full" />
               ) : (
                 <div className="bg-brand grid aspect-[3/4] place-items-center p-10 text-center font-display text-2xl text-white">
                   {item.title}

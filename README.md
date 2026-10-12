@@ -56,5 +56,24 @@ npx remotion render src/remotion/index.js NewsReel out/news.mp4
 
 ## Deploy
 
+### GitHub Pages
+
+เว็บ: https://kalamell.github.io/myweb01/
+
+`.github/workflows/deploy.yml` จะ build และ deploy อัตโนมัติทุกครั้งที่ push ไปยัง `main` หรือ branch พัฒนา
+(สั่งรันเองได้จากแท็บ Actions → *Deploy to GitHub Pages* → *Run workflow*)
+
+- ตั้ง `BASE_PATH=/<ชื่อ repo>/` ตอน build เพื่อให้ path ของไฟล์ถูกต้อง
+- คัดลอก `index.html` เป็น `404.html` เพื่อให้ลิงก์ตรงเข้าหน้าย่อย เช่น `/myweb01/about` ใช้งานได้
+- ถ้า workflow ล้มเหลวที่ขั้น *configure-pages* ให้ไปที่ **Settings → Pages → Build and deployment → Source** แล้วเลือก **GitHub Actions** หนึ่งครั้ง
+
+ทดสอบแบบเดียวกับบน GitHub Pages ในเครื่อง:
+
+```bash
+BASE_PATH=/myweb01/ npm run build && npm run preview   # เปิด http://localhost:4173/myweb01/
+```
+
+### Vercel / Netlify
+
 เป็น SPA ที่ใช้ `BrowserRouter` จึงต้องตั้งให้เซิร์ฟเวอร์ส่ง `index.html` กลับไปทุกเส้นทาง
 (Vercel ใช้ `vercel.json` ที่แนบมา, Netlify ใช้ `public/_redirects`)

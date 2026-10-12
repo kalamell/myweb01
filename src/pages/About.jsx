@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Eye, Music, Target, Trees } from 'lucide-react'
+import { asset } from '../lib/asset'
 import { PageHero, Reveal, SectionHeading, fadeUp, stagger } from '../components/ui'
 import { colors, emblem, identity, missions, nameMeaning, objectives, school, song, timeline } from '../data/school'
 
@@ -13,7 +14,7 @@ function Emblem() {
         />
         <div className="absolute inset-10 rounded-full bg-white shadow-2xl shadow-saffron-500/20" />
         <motion.img
-          src={school.logo}
+          src={asset(school.logo)}
           alt="ตราสัญลักษณ์โรงเรียน"
           className="relative h-3/5 w-auto"
           animate={{ y: [0, -10, 0] }}
@@ -107,11 +108,11 @@ function Timeline() {
       </div>
       <div className="mt-16 grid gap-6 sm:grid-cols-2">
         <Reveal className="overflow-hidden rounded-3xl bg-white shadow-lg">
-          <img src="/images/hist2.webp" alt="พระครูโสภณธรรมสาคร (หลวงพ่ออาบ)" className="aspect-[5/4] w-full object-cover object-top" loading="lazy" />
+          <img src={asset('images/hist2.webp')} alt="พระครูโสภณธรรมสาคร (หลวงพ่ออาบ)" className="aspect-[5/4] w-full object-cover object-top" loading="lazy" />
           <div className="p-5 font-display">พระครูโสภณธรรมสาคร (หลวงพ่ออาบ) ผู้ก่อตั้งโรงเรียน</div>
         </Reveal>
         <Reveal delay={0.1} className="overflow-hidden rounded-3xl bg-white shadow-lg">
-          <img src="/images/hist1.webp" alt="หลวงพ่อเพ็ง" className="aspect-[5/4] w-full object-cover" loading="lazy" />
+          <img src={asset('images/hist1.webp')} alt="หลวงพ่อเพ็ง" className="aspect-[5/4] w-full object-cover" loading="lazy" />
           <div className="p-5 font-display">หลวงพ่อเพ็ง พระประธานในอุโบสถวัดอ้อมน้อย พระพุทธรูปประจำสถานศึกษา</div>
         </Reveal>
       </div>
@@ -183,7 +184,7 @@ function Song() {
       </div>
       <div className="flex flex-col gap-6">
         <Reveal className="overflow-hidden rounded-3xl bg-white shadow-xl">
-          <img src="/images/tree.webp" alt="ต้นนนทรี" className="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <img src={asset('images/tree.webp')} alt="ต้นนนทรี" className="aspect-[4/3] w-full object-cover" loading="lazy" />
           <div className="flex items-center gap-3 p-6">
             <Trees className="size-8 text-saffron-500" />
             <div>
